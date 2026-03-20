@@ -4,6 +4,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://cmershon2.github.io',
+	base: '/MetaVisage-Docs',
 	integrations: [
 		starlight({
 			title: 'My Docs',
