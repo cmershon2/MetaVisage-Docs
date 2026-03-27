@@ -1,40 +1,54 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
-hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
-  actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+title: Convert 3D Sculpts To MetaHumans with Precision
+description: The open-source bridge between digital sculpts & high-fidelity animation. Use non-rigid iterative closet point algorithms to accurately morph meshes.
+head:
+  - tag: title
+content: starlight-six
+editUrl: false
+template: splash
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
+import { HeroX, ContainerSection, YouTubeX } from '@six-tech/starlight-theme-six/components'
+import heroImage from '../../assets/metavisage_hero.png'
 
-## Next steps
+<HeroX
+	mt="2rem" 
+	mb="0" 
+	px="4rem" 
+	radius="1.5rem"
+	image={{ 
+		background: heroImage, 
+		alt: "Hero background image", 
+		backgroundSize: "cover", 
+		backgroundPosition: "center", 
+		backgroundRepeat: "no-repeat", 
+		contentPosition: "bottom-left" 
+	}} 
+	actions={[ 
+		{ 
+			text: "Get Sculpting", 
+			link: "/guides/example/" 
+		}, 
+		{ 
+			text: "Download", 
+			link: "https://github.com/cmershon2/MetaVisage/releases", 
+			attrs: { target: "_blank", rel: "noopener noreferrer" } 
+		} 
+	]} 
+/>
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
-</CardGrid>
+<ContainerSection>
+
+    ## Next steps
+
+    <CardGrid>
+        <Card title="Introduction" icon="puzzle">
+            Check the [Getting started guide](/getting-started/introduction/) for an introduction to MetaVisage.
+        </Card>
+        <Card title="Installation & Setup" icon="setting">
+            Check the [Installation and Setup](/getting-started/installation/) for how to install MetaVisage.
+        </Card>
+    </CardGrid>
+
+</ContainerSection>
