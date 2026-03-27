@@ -8,6 +8,11 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'MetaVisage',
+			logo: {
+				replacesTitle: true,
+				light: './src/assets/metavisage-light.png',
+				dark: './src/assets/metavisage-dark.png',
+			},
 			social: [
 				{ icon: 'download', label: 'Download', href: 'https://github.com/cmershon2/MetaVisage/releases' },
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/cmershon2/MetaVisage' }
