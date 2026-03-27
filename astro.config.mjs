@@ -4,12 +4,14 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://cmershon2.github.io',
-	base: '/MetaVisage-Docs',
+	site: 'https://metavisage.projecthost.dev',
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'MetaVisage',
+			social: [
+				{ icon: 'download', label: 'Download', href: 'https://github.com/cmershon2/MetaVisage/releases' },
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/cmershon2/MetaVisage' }
+			],
 			sidebar: [
 				{
 					label: 'Guides',
