@@ -1,12 +1,24 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightThemeSix from '@six-tech/starlight-theme-six'
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://metavisage.projecthost.dev',
 	integrations: [
 		starlight({
+			plugins: [
+				starlightThemeSix({
+					navLinks: [
+						{
+							label: 'Docs',
+							link: '/getting-started',
+						}
+					],
+					footerText: 'MetaVisage - Open Source Project'
+				})
+			],
 			title: 'MetaVisage',
 			logo: {
 				replacesTitle: true,
